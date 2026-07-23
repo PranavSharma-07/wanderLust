@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <div class="row">
+        <div class="col-7 offset-2">
+            <br>
+    <h2> Edit your listing.</h2>
+
+    <form method="POST" action="/listings/<%= moreData._id %>?_method=PUT" novalidate class="needs-validation">
+
+        <div class="mb-3">
+            <label for="title" class="form-lable">Title</label>
+            <input type="text" value="<%= moreData.title %>" name="listing[title]" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-lable">Description</label>
+            <textarea rows="5" cols="22" name="listing[description]" value="<%= moreData.description %>"class="form-control" required><%= moreData.description %></textarea>
+            <div class="invalid-feedback">please enter  a short description</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-lable">Image Link</label>
+            <input type="text" value="<%= moreData.image.url %>" name="listing[image][url]" class="form-control"  required>
+            <div class="invalid-feedback">please enter  a valid link</div>
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-4">
+            <label for="Price" class="form-lable">Price</label>
+            <input type="text" value="<%= moreData.price %>" name="listing[price]"class="form-control"  required>
+            <div class="invalid-feedback">Price should be valid</div>
+        </div>
+
+        <div class="mb-3 col-8">
+            <label for="country" class="form-lable">Country</label>
+            <input type="text" value="<%= moreData.country %>" name="listing[country]"class="form-control"  required>
+            <div class="invalid-feedback">Please enter country name</div>
+        </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-lable">Location</label>
+            <input type="text" value="<%= moreData.location %>" name="listing[location]"class="form-control"  required>
+            <div class="invalid-feedback">enter location</div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-dark edit-btn">Change</button>
+        <br><br>
+    </form>
+    </div>
+    </div>
