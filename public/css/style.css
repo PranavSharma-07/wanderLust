@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
+    min-height: 100vh;
 }
 
 .container{
@@ -194,4 +194,82 @@ body{
 .btn-dark:hover{
     transform: translateY(-2px);
     transition: 0.2s;
+}
+
+/* Login Page */
+
+.login-form{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.login-form form{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.login-form h1{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.login-form .form-label{
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.login-form .form-control{
+    border-radius: 10px;
+    padding: 0.7rem;
+}
+
+.login-form .btn-success{
+    width: auto;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.7rem;
+    margin-top: 0.8rem;
+}
+
+/* Signup Page */
+
+.signup-form{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.signup-form form{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.signup-form h1{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.signup-form .form-label{
+    font-weight: 600;
+}
+
+.signup-form .form-control{
+    border-radius: 10px;
+    padding: 0.7rem;
+}
+
+.signup-form .btn-success{
+    display: block;
+    margin: 1rem auto 0;
+    width: 180px;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.7rem;
 }
