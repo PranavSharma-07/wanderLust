@@ -1,23 +1,25 @@
 # WanderLust 🏡
 
-A full-stack Airbnb-inspired web application built while learning the MERN Stack.
+A full-stack Airbnb-inspired web application built while learning backend development with Node.js, Express.js, MongoDB, and modern web development practices.
 
 ## Features
 
+- User Authentication (Signup, Login, Logout)
+- Authorization (Listing & Review Ownership)
 - Create Listings
 - View Listing Details
 - Edit Listings
 - Delete Listings
 - Add Reviews
 - Delete Reviews
+- MongoDB Relationships (Listings & Reviews)
 - Joi Validation
 - Custom Error Handling
 - Express Middleware
 - Express Router
-- Sessions & Cookies
-- Flash Messages (Success/Error)
 - RESTful Routes
-- MongoDB Relationships (Listings & Reviews)
+- Sessions & Cookies
+- Flash Messages
 
 ## Tech Stack
 
@@ -28,24 +30,29 @@ A full-stack Airbnb-inspired web application built while learning the MERN Stack
 - EJS
 - Bootstrap 5
 - Joi
+- Passport.js
+- passport-local
+- passport-local-mongoose
 - express-session
 - connect-flash
 - method-override
 
 ## Current Status
 
-🚧 Authentication & Authorization are currently in progress.
+- ✅ Authentication (Signup, Login, Logout)
+- ✅ Authorization (Listing & Review Ownership)
+- 🚧 Cloudinary Image Upload Integration (In Progress)
 
 ## Upcoming Features
 
-- User Registration
-- User Login & Logout
-- Passport.js Authentication
-- Authorization
-- Listing Ownership
-- Review Ownership
-- Image Uploads
+- Cloudinary Image Uploads
 - Search & Filters
+- Interactive Maps
+- Deployment
+
+## Learning Goals
+
+This project is being built while learning backend development with Node.js, Express.js, MongoDB, Passport.js, and industry-standard web development practices. New features are added incrementally as the project progresses.
 
 ## Author
 
