@@ -1,3 +1,8 @@
+if(process.env.NODE_ENV != "production"){
+    require('dotenv').config();
+}
+
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -69,19 +74,6 @@ app.use((req, res, next) => {
     res.locals.currUser = req.user;
     next();
 });
-
-
-// //demo User
-// app.get("/demoUser", async(req,res) => {
-//     let fakeUser = new User({
-//         email: "bob@gmail.com",
-//         username: "bob123",
-        
-//     });
-//     let registerUser = await User.register(fakeUser, "helloworld");
-//     res.send(registerUser);
-// });
-
 
 
 app.use("/listings", listingRouter);

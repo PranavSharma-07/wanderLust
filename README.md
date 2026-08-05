@@ -20,6 +20,9 @@ A full-stack Airbnb-inspired web application built while learning backend develo
 - RESTful Routes
 - Sessions & Cookies
 - Flash Messages
+- Image Upload (Cloudinary)
+- Image Editing
+- Cloud Image Storage
 
 ## Tech Stack
 
@@ -31,6 +34,9 @@ A full-stack Airbnb-inspired web application built while learning backend develo
 - Bootstrap 5
 - Joi
 - Passport.js
+- Cloudinary
+- Multer
+- Multer-Storage-Cloudinary
 - passport-local
 - passport-local-mongoose
 - express-session
@@ -39,13 +45,16 @@ A full-stack Airbnb-inspired web application built while learning backend develo
 
 ## Current Status
 
-- ✅ Authentication (Signup, Login, Logout)
-- ✅ Authorization (Listing & Review Ownership)
-- 🚧 Cloudinary Image Upload Integration (In Progress)
+✅ Authentication (Signup, Login, Logout)
+
+✅ Authorization (Listing & Review Ownership)
+
+✅ Cloudinary Image Upload
+
+🚧 Map Integration (Mapbox) — In Progress
 
 ## Upcoming Features
 
-- Cloudinary Image Uploads
 - Search & Filters
 - Interactive Maps
 - Deployment

@@ -6,7 +6,7 @@
             <br>
     <h2> Edit your listing.</h2>
 
-    <form method="POST" action="/listings/<%= moreData._id %>?_method=PUT" novalidate class="needs-validation">
+    <form method="POST" action="/listings/<%= moreData._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
 
         <div class="mb-3">
             <label for="title" class="form-lable">Title</label>
@@ -19,10 +19,13 @@
             <textarea rows="5" cols="22" name="listing[description]" value="<%= moreData.description %>"class="form-control" required><%= moreData.description %></textarea>
             <div class="invalid-feedback">please enter  a short description</div>
         </div>
-
         <div class="mb-3">
-            <label for="image" class="form-lable">Image Link</label>
-            <input type="text" value="<%= moreData.image.url %>" name="listing[image][url]" class="form-control"  required>
+            Original Listing Image<br>
+            <img src="<%= ogImageUrl %>">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-lable">Upload New Image</label>
+            <input type="file" name="listing[image]" class="form-control">
             <div class="invalid-feedback">please enter  a valid link</div>
         </div>
 
