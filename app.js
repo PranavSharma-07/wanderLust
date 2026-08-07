@@ -84,9 +84,9 @@ app.use("", userRouter);
 
 
 //root route
-app.get("/", (req, res) =>{
-    res.send("Hi i am root!");
-});
+// app.get("/", (req, res) =>{
+//     res.send("Hi i am root!");
+// });
 
 //custom error 
 app.use((req, res, next) => {

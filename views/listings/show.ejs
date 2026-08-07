@@ -64,9 +64,9 @@
      </form>
      <% } %>
 
-     <hr>
-     <P><B>Guest reviews</B></P>
+     <% if(moreData.reviews.length > 0) { %>
      <div class="row">
+     <P><B>Guest reviews</B></P>
       <% for(review of moreData.reviews) {%>
           <div class="card col-5 mb-3 ms-3">
                <div class="card-body">
@@ -81,6 +81,14 @@
           </div>
           <% } %>
           </div>
+          <% } %>
    </div>
-        
+
+   
+         <!-- <div class="col-6 offset-2 mb-3">
+               <h3>Where you'll be</h3>
+               <div id="map"></div>
+          </div>
+
+          <script src="/js/map.js"></script> -->
      </div>
