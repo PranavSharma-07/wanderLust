@@ -12,7 +12,10 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
+
 const session = require("express-session");
+const MongoStore = require('connect-mongo').default;
+
 const flash  = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -33,7 +36,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true }));
 app.use(methodOverride("_method"));
 
-
+const dbUrl = process.env.ATLASDB_URL
 main()
 .then(()=>{
     console.log("connection successful!");
@@ -41,13 +44,22 @@ main()
 .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/wanderLust');
+  await mongoose.connect(dbUrl);
 
 };
 
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 3600 ,
+
+});
+store.on("error", (err) => {
+    console.log("ERROR IN MONGO STORE ",err);
+});
 
 const sessionOptions  =   {
-    secret: "myufo",
+    store,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
